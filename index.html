@@ -886,12 +886,48 @@
     background: transparent;
     border: none;
     }
+
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 280px; /* กำหนดความกว้างขั้นต่ำเท่ากัน */
+  box-sizing: border-box;
+  justify-content: center; /* จัดข้อความให้อยู่กึ่งกลางในกรอบ */
+}
+
+.contact-item span,
+.contact-item img {
+  flex-shrink: 0;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+    
     </style>
+    
 </head>
 <body>
     <div class="progress-bar"></div>
     <div class="background-pattern"></div>
-    
     <!-- Floating Navigation -->
     <div class="nav-floating">
     <div class="nav-item" title="หน้าแรก">🏠</div>
@@ -954,6 +990,15 @@
     <div class="skill-percentage">60%</div>
     <div class="skill-name">HTML</div>
     </div>
+    </div>
+    </div>
+    <!-- Skills Card -->
+    <div class="card slide-in-left">
+    <h2 class="card-title">
+    <span class="card-icon">⚡</span>
+    ความเชี่ยวชาญ
+    </h2>
+    <div class="skills-container">
     <div class="skill-item">
     <div class="skill-percentage">60%</div>
     <div class="skill-name">CSS</div>
@@ -1103,11 +1148,11 @@
 
      <div class="certificates-grid">
     <div class="certificate-card" tabindex="0" role="button" aria-pressed="false" aria-label="ดูรูปเกียรติบัตรและใบรับรอง">
-    <img src="https://cdn.abacus.ai/images/c85678e8-6375-4bac-801f-09bf0cba6a19.png" alt="Startup Thailand Certificate" class="certificate-image" id="certificate-img">
+    <img src="https://github.com/pakasit14/pakasit-resume/blob/main/images/4.jpeg?raw=true" alt="Startup Thailand Certificate" class="certificate-image" id="certificate-img">
     <div class="certificate-content">
-    <h3 class="certificate-title">Regional Pitching Startup Thailand League 2025</h3>
-    <p class="certificate-issuer">สำนักงานนวัตกรรมแห่งชาติ (องค์การมหาชน) & Startup Thailand</p>
-    <p class="certificate-year">อันดับที่ 9 - ทีม SmartFarmMove (25 พฤษภาคม 2568)</p>
+    <h3 class="certificate-title">Responsive Web Design</h3>
+    <p class="certificate-issuer">freecodecamp</p>
+    <p class="certificate-year">Developer Certification on July 28, 2025</p>
     </div>
     </div>
     </div>
@@ -1115,33 +1160,29 @@
     </div>
     </div>
     <!-- Contact Section -->
-    <div class="card contact-full fade-in" id="contact-section">
-    <h2 class="card-title">
+   <div class="card contact-full fade-in" id="contact-section">
+  <h2 class="card-title">
     <span class="card-icon">💬</span>
     มาสร้างสรรค์ไปด้วยกัน
-    </h2>
-    <p class="contact-description">
-    พร้อมที่จะร่วมงานกับคุณในโครงการที่น่าตื่นเต้น? 
-    มาคุยกันเรื่องไอเดียและความฝันของคุณ
-    </p>
-    
-    <div class="contact-methods">
-    <a href="mailto:www.pakasit14@gmail.com" class="contact-item">
+  </h2>
+<div class="contact-methods">
+  <a href="https://maps.app.goo.gl/RkaSn9h6KnmSnfp98?g_st=ic" class="contact-item">
+    <span>🚩</span>
+    <span>35/6 หมู่ 4, หนองเต่า, เก้าเลี้ยว, นครสวรรค์</span>
+  </a>
+  <a href="mailto:www.pakasit14@gmail.com" class="contact-item">
     <span>📧</span>
     <span>www.pakasit14@gmail.com</span>
-    </a>
-    <a href="tel:080-692-9845" class="contact-item">
+  </a>
+  <a href="tel:080-692-9845" class="contact-item">
     <span>📱</span>
     <span>080-692-9845</span>
-    </a>
-   <a href="https://github.com/pakasit14" target="_blank" rel="noopener noreferrer" class="contact-item">
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Icon" style="width:24px; height:24px; margin-right:8px;">
-  <span>GitHub</span>
-</a>
-    </div>
-    </div>
-    </div>
-    </div>
+  </a>
+  <a href="https://github.com/pakasit14" target="_blank" rel="noopener noreferrer" class="contact-item">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Icon" style="width:24px; height:24px; margin-right:8px;">
+    <span>GitHub</span>
+  </a>
+</div>
 
     <!-- Modal for Certificate Image -->
     <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
